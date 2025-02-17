@@ -1,0 +1,13 @@
+# common setup for layout generation
+# used in VTN (CVPR'21) and BLT (ECCV'22)
+_target_: models.transformer_utils.TransformerEncoder
+encoder_layer:
+  _target_: models.transformer_utils.Block
+  d_model: 512
+  nhead: 8
+  # dim_feedforward: 2048
+  dim_feedforward: 1024
+  dropout: 0.1
+  batch_first: true
+  norm_first: true
+num_layers: 4

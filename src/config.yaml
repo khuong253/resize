@@ -1,0 +1,16 @@
+dataset:
+  _target_: datasets.obello.ObelloDataset
+  _partial_: true
+  max_seq_length: 10
+
+data:
+  bbox_quantization: kmeans
+  num_bin_bboxes: 128
+  num_workers: 4
+  pad_until_max: true
+  shared_bbox_vocab: x-y-w-h
+  special_tokens:
+    - pad
+    - sep
+    - mask
+  var_order: c-w-h-x-y

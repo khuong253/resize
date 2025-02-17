@@ -1,0 +1,14 @@
+# @package _global_
+defaults:
+  - override /model: bart
+  # - override /scheduler: reduce_lr_on_plateau
+
+data:
+  pad_until_max: true
+  special_tokens: [pad, bos, eos, sep, mask]
+  # special_tokens: [pad, sep, mask]
+  var_order: c-w-h-x-y
+
+# scheduler:
+  # factor: 0.5
+  # patience: 10

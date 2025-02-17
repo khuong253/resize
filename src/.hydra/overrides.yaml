@@ -1,0 +1,6 @@
+- +experiment=bart
+- fid_weight_dir=./tmp/fid_weights
+- job_dir=./tmp/bart
+- dataset=obello
+- dataset.dir=./download/datasets
+- seed=0

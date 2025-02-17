@@ -1,0 +1,4 @@
+_target_: datasets.obello.ObelloDataset
+_partial_: true
+dir: ???
+max_seq_length: 15

@@ -1,0 +1,87 @@
+[2025-02-13 07:45:09,750][__main__][INFO] - {'backbone': {'_target_': 'models.transformer_utils.TransformerEncoder', 'encoder_layer': {'_target_': 'models.transformer_utils.Block', 'd_model': 512, 'nhead': 8, 'dim_feedforward': 1024, 'dropout': 0.1, 'batch_first': True, 'norm_first': True}, 'num_layers': 4}, 'dataset': {'_target_': 'datasets.obello.ObelloDataset', '_partial_': True, 'dir': './download/datasets', 'max_seq_length': 15}, 'data': {'batch_size': 64, 'bbox_quantization': 'kmeans', 'num_bin_bboxes': 128, 'num_workers': 4, 'pad_until_max': True, 'shared_bbox_vocab': 'x-y-w-h', 'special_tokens': ['pad', 'bos', 'eos', 'sep', 'mask'], 'transforms': [], 'var_order': 'c-w-h-x-y'}, 'model': {'_target_': 'models.bart.BART', '_partial_': True}, 'optimizer': {'_target_': 'torch.optim.AdamW', '_partial_': True, 'lr': 0.0001, 'betas': [0.9, 0.98]}, 'sampling': {'temperature': 1.0, 'name': 'random'}, 'scheduler': {'_target_': 'helpers.scheduler.VoidScheduler', '_partial_': True}, 'training': {'resume_epoch': '', 'resume': False, 'pretrained': False, 'epochs': 350, 'grad_norm_clip': 1.0, 'weight_decay': 0.1, 'saving_epoch_interval': 50, 'loss_plot_iter_interval': 50, 'sample_plot_epoch_interval': 1, 'fid_plot_num_samples': 200, 'fid_plot_batch_size': 64}, 'job_dir': './tmp/bart', 'fid_weight_dir': './tmp/fid_weights', 'seed': 0, 'device': 'cuda', 'debug': False}
+[2025-02-13 08:22:02,725][__main__][INFO] - {'backbone': {'_target_': 'models.transformer_utils.TransformerEncoder', 'encoder_layer': {'_target_': 'models.transformer_utils.Block', 'd_model': 512, 'nhead': 8, 'dim_feedforward': 1024, 'dropout': 0.1, 'batch_first': True, 'norm_first': True}, 'num_layers': 4}, 'dataset': {'_target_': 'datasets.obello.ObelloDataset', '_partial_': True, 'dir': './download/datasets', 'max_seq_length': 15}, 'data': {'batch_size': 64, 'bbox_quantization': 'kmeans', 'num_bin_bboxes': 128, 'num_workers': 4, 'pad_until_max': True, 'shared_bbox_vocab': 'x-y-w-h', 'special_tokens': ['pad', 'bos', 'eos', 'sep', 'mask'], 'transforms': [], 'var_order': 'c-w-h-x-y'}, 'model': {'_target_': 'models.bart.BART', '_partial_': True}, 'optimizer': {'_target_': 'torch.optim.AdamW', '_partial_': True, 'lr': 0.0001, 'betas': [0.9, 0.98]}, 'sampling': {'temperature': 1.0, 'name': 'random'}, 'scheduler': {'_target_': 'helpers.scheduler.VoidScheduler', '_partial_': True}, 'training': {'resume_epoch': '', 'resume': False, 'pretrained': False, 'epochs': 350, 'grad_norm_clip': 1.0, 'weight_decay': 0.1, 'saving_epoch_interval': 50, 'loss_plot_iter_interval': 50, 'sample_plot_epoch_interval': 1, 'fid_plot_num_samples': 200, 'fid_plot_batch_size': 64}, 'job_dir': './tmp/bart', 'fid_weight_dir': './tmp/fid_weights', 'seed': 0, 'device': 'cuda', 'debug': False}
+[2025-02-13 08:22:04,744][helpers.layout_tokenizer][INFO] - N_total=525, (N_label, N_bbox, N_sp_token)=(8,512,5)
+[2025-02-13 08:22:15,330][models.base_model][INFO] - number of parameters: 2.199398e+01
+[2025-02-13 08:22:28,321][__main__][INFO] - Epoch 0: elapsed = 13.0s:
+- train_loss = 5.4392, val_loss = 4.9599
+[2025-02-13 08:22:28,555][__main__][INFO] - Save best train checkpoint in ./tmp/bart/0
+[2025-02-13 08:22:28,915][__main__][INFO] - Save best val checkpoint in ./tmp/bart/0
+[2025-02-13 08:22:40,319][__main__][INFO] - Epoch 1: elapsed = 11.4s:
+- train_loss = 4.7420, val_loss = 4.3525
+[2025-02-13 08:22:40,691][__main__][INFO] - Save best train checkpoint in ./tmp/bart/0
+[2025-02-13 08:22:41,049][__main__][INFO] - Save best val checkpoint in ./tmp/bart/0
+[2025-02-13 08:22:55,080][__main__][INFO] - Epoch 2: elapsed = 14.0s:
+- train_loss = 4.2171, val_loss = 4.0019
+[2025-02-13 08:22:55,347][__main__][INFO] - Save best train checkpoint in ./tmp/bart/0
+[2025-02-13 08:22:55,761][__main__][INFO] - Save best val checkpoint in ./tmp/bart/0
+[2025-02-13 08:23:09,636][__main__][INFO] - Epoch 3: elapsed = 13.9s:
+- train_loss = 3.8992, val_loss = 3.7457
+[2025-02-13 08:23:09,890][__main__][INFO] - Save best train checkpoint in ./tmp/bart/0
+[2025-02-13 08:23:10,299][__main__][INFO] - Save best val checkpoint in ./tmp/bart/0
+[2025-02-13 08:23:22,112][__main__][INFO] - Epoch 4: elapsed = 11.8s:
+- train_loss = 3.6632, val_loss = 3.5506
+[2025-02-13 08:23:22,374][__main__][INFO] - Save best train checkpoint in ./tmp/bart/0
+[2025-02-13 08:23:22,964][__main__][INFO] - Save best val checkpoint in ./tmp/bart/0
+[2025-02-13 08:23:34,526][__main__][INFO] - Epoch 5: elapsed = 11.6s:
+- train_loss = 3.4511, val_loss = 3.3780
+[2025-02-13 08:23:34,840][__main__][INFO] - Save best train checkpoint in ./tmp/bart/0
+[2025-02-13 08:23:35,198][__main__][INFO] - Save best val checkpoint in ./tmp/bart/0
+[2025-02-13 08:23:46,875][__main__][INFO] - Epoch 6: elapsed = 11.7s:
+- train_loss = 3.2719, val_loss = 3.1894
+[2025-02-13 08:23:47,139][__main__][INFO] - Save best train checkpoint in ./tmp/bart/0
+[2025-02-13 08:23:47,565][__main__][INFO] - Save best val checkpoint in ./tmp/bart/0
+[2025-02-13 08:24:02,198][__main__][INFO] - Epoch 7: elapsed = 14.6s:
+- train_loss = 3.0950, val_loss = 3.0153
+[2025-02-13 08:24:02,457][__main__][INFO] - Save best train checkpoint in ./tmp/bart/0
+[2025-02-13 08:24:02,854][__main__][INFO] - Save best val checkpoint in ./tmp/bart/0
+[2025-02-13 08:24:14,587][__main__][INFO] - Epoch 8: elapsed = 11.7s:
+- train_loss = 2.9279, val_loss = 2.8525
+[2025-02-13 08:24:14,889][__main__][INFO] - Save best train checkpoint in ./tmp/bart/0
+[2025-02-13 08:24:15,242][__main__][INFO] - Save best val checkpoint in ./tmp/bart/0
+[2025-02-13 08:25:28,615][__main__][INFO] - {'backbone': {'_target_': 'models.transformer_utils.TransformerEncoder', 'encoder_layer': {'_target_': 'models.transformer_utils.Block', 'd_model': 512, 'nhead': 8, 'dim_feedforward': 1024, 'dropout': 0.1, 'batch_first': True, 'norm_first': True}, 'num_layers': 4}, 'dataset': {'_target_': 'datasets.obello.ObelloDataset', '_partial_': True, 'dir': './download/datasets', 'max_seq_length': 15}, 'data': {'batch_size': 64, 'bbox_quantization': 'kmeans', 'num_bin_bboxes': 128, 'num_workers': 4, 'pad_until_max': True, 'shared_bbox_vocab': 'x-y-w-h', 'special_tokens': ['pad', 'bos', 'eos', 'sep', 'mask'], 'transforms': [], 'var_order': 'c-w-h-x-y'}, 'model': {'_target_': 'models.bart.BART', '_partial_': True}, 'optimizer': {'_target_': 'torch.optim.AdamW', '_partial_': True, 'lr': 0.0001, 'betas': [0.9, 0.98]}, 'sampling': {'temperature': 1.0, 'name': 'random'}, 'scheduler': {'_target_': 'helpers.scheduler.VoidScheduler', '_partial_': True}, 'training': {'resume_epoch': '', 'resume': False, 'pretrained': False, 'epochs': 10, 'grad_norm_clip': 1.0, 'weight_decay': 0.1, 'saving_epoch_interval': 50, 'loss_plot_iter_interval': 50, 'sample_plot_epoch_interval': 1, 'fid_plot_num_samples': 200, 'fid_plot_batch_size': 64}, 'job_dir': './tmp/bart', 'fid_weight_dir': './tmp/fid_weights', 'seed': 0, 'device': 'cuda', 'debug': False}
+[2025-02-13 08:25:28,676][helpers.layout_tokenizer][INFO] - N_total=525, (N_label, N_bbox, N_sp_token)=(8,512,5)
+[2025-02-13 08:25:29,069][models.base_model][INFO] - number of parameters: 2.199398e+01
+[2025-02-13 08:25:41,100][__main__][INFO] - Epoch 0: elapsed = 12.0s:
+- train_loss = 5.4392, val_loss = 4.9599
+[2025-02-13 08:25:41,394][__main__][INFO] - Save best train checkpoint in ./tmp/bart/0
+[2025-02-13 08:25:41,854][__main__][INFO] - Save best val checkpoint in ./tmp/bart/0
+[2025-02-13 08:25:53,637][__main__][INFO] - Epoch 1: elapsed = 11.8s:
+- train_loss = 4.7420, val_loss = 4.3524
+[2025-02-13 08:25:53,895][__main__][INFO] - Save best train checkpoint in ./tmp/bart/0
+[2025-02-13 08:25:54,362][__main__][INFO] - Save best val checkpoint in ./tmp/bart/0
+[2025-02-13 08:26:06,421][__main__][INFO] - Epoch 2: elapsed = 12.1s:
+- train_loss = 4.2171, val_loss = 4.0018
+[2025-02-13 08:26:06,690][__main__][INFO] - Save best train checkpoint in ./tmp/bart/0
+[2025-02-13 08:26:07,074][__main__][INFO] - Save best val checkpoint in ./tmp/bart/0
+[2025-02-13 08:26:18,903][__main__][INFO] - Epoch 3: elapsed = 11.8s:
+- train_loss = 3.8991, val_loss = 3.7456
+[2025-02-13 08:26:19,191][__main__][INFO] - Save best train checkpoint in ./tmp/bart/0
+[2025-02-13 08:26:19,577][__main__][INFO] - Save best val checkpoint in ./tmp/bart/0
+[2025-02-13 08:26:31,464][__main__][INFO] - Epoch 4: elapsed = 11.9s:
+- train_loss = 3.6631, val_loss = 3.5503
+[2025-02-13 08:26:31,713][__main__][INFO] - Save best train checkpoint in ./tmp/bart/0
+[2025-02-13 08:26:32,104][__main__][INFO] - Save best val checkpoint in ./tmp/bart/0
+[2025-02-13 08:26:43,944][__main__][INFO] - Epoch 5: elapsed = 11.8s:
+- train_loss = 3.4509, val_loss = 3.3779
+[2025-02-13 08:26:44,206][__main__][INFO] - Save best train checkpoint in ./tmp/bart/0
+[2025-02-13 08:26:44,575][__main__][INFO] - Save best val checkpoint in ./tmp/bart/0
+[2025-02-13 08:26:57,953][__main__][INFO] - Epoch 6: elapsed = 13.4s:
+- train_loss = 3.2717, val_loss = 3.1894
+[2025-02-13 08:26:58,203][__main__][INFO] - Save best train checkpoint in ./tmp/bart/0
+[2025-02-13 08:26:58,601][__main__][INFO] - Save best val checkpoint in ./tmp/bart/0
+[2025-02-13 08:27:10,760][__main__][INFO] - Epoch 7: elapsed = 12.2s:
+- train_loss = 3.0951, val_loss = 3.0176
+[2025-02-13 08:27:11,030][__main__][INFO] - Save best train checkpoint in ./tmp/bart/0
+[2025-02-13 08:27:11,430][__main__][INFO] - Save best val checkpoint in ./tmp/bart/0
+[2025-02-13 08:27:23,197][__main__][INFO] - Epoch 8: elapsed = 11.8s:
+- train_loss = 2.9292, val_loss = 2.8511
+[2025-02-13 08:27:23,465][__main__][INFO] - Save best train checkpoint in ./tmp/bart/0
+[2025-02-13 08:27:23,868][__main__][INFO] - Save best val checkpoint in ./tmp/bart/0
+[2025-02-13 08:27:35,882][__main__][INFO] - Epoch 9: elapsed = 12.0s:
+- train_loss = 2.7453, val_loss = 2.6842
+[2025-02-13 08:27:36,140][__main__][INFO] - Save best train checkpoint in ./tmp/bart/0
+[2025-02-13 08:27:36,524][__main__][INFO] - Save best val checkpoint in ./tmp/bart/0
+[2025-02-13 08:27:48,314][__main__][INFO] - Epoch 10: elapsed = 11.8s:
+- train_loss = 2.6220, val_loss = 2.5757
+[2025-02-13 08:27:48,585][__main__][INFO] - Save best train checkpoint in ./tmp/bart/0
+[2025-02-13 08:27:48,914][__main__][INFO] - Save best val checkpoint in ./tmp/bart/0
